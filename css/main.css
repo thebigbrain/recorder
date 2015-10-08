@@ -1,0 +1,45 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.top-bar {
+	position: fixed;
+	width:100%;
+	margin: 0;
+	background-color: #aaa;
+}
+
+.top-bar .nav {
+	padding:.5em 1em;
+	overflow: hidden;
+}
+
+.top-bar .nav .bar-title {
+	display: inline-block;
+	line-height: 50px;
+}
+
+.top-bar .nav .bar-icon {
+	float:left;
+	width: 70px;
+	height: 50px;
+}
+
+.nav-left {
+	float: left;
+	margin-right: 15px;
+}
+
+.nav-right {
+	float:right;
+	margin-left: 15px;
+}
+
+.icon:hover {
+	fill:#a56;
+	cursor: pointer;
+}

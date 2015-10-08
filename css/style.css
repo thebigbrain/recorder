@@ -1,0 +1,58 @@
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+/* =======================================================================================
+Example showing how to change the color/size of the icons:
+.icon-name {
+	font-size: 32px; // works because "width" & "height" were set using em units
+	color: red; // works for single-colored icons, because "fill" was set to "currentColor"
+}
+======================================================================================== */
+
+.icon-wrench {
+	width: 0.998046875em;
+}
+
+.icon-spin {
+	width: 0.875em;
+}
+
+.icon-list {
+	width: 1.142578125em;
+}
+
+.icon-user {
+	width: 0.75em;
+}
+
+.icon-map-pin-stroke {
+	width: 0.625em;
+}
+
+.icon-map-pin-fill {
+	width: 0.625em;
+}
+
+.icon-map-pin-alt {
+	width: 0.5em;
+}
+
+.icon-download {
+	width: 0.75em;
+}
+
+.icon-upload {
+	width: 0.75em;
+}
+
+.icon-bubbles {
+	width: 1.125em;
+}
+
+.icon-users {
+	width: 1.125em;
+}

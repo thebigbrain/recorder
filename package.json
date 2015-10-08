@@ -1,0 +1,22 @@
+{
+  "name": "recorder",
+  "version": "1.0.0",
+  "description": "record everything",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebigbrain/recorder.git"
+  },
+  "author": "thebigbrain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebigbrain/recorder/issues"
+  },
+  "homepage": "https://github.com/thebigbrain/recorder#readme",
+  "devDependencies": {
+    "webpack": "^1.12.2"
+  }
+}
