@@ -1,22 +1,11 @@
 {
-  "name": "recorder",
-  "version": "1.0.0",
-  "description": "record everything",
+  "name": "webpack-example",
   "scripts": {
     "build": "webpack --progress --profile --colors",
     "watch": "webpack-dev-server --hot --inline --progress --colors",
     "test": "echo \"No unit tests and e2e tests yet\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thebigbrain/recorder.git"
-  },
-  "author": "thebigbrain",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thebigbrain/recorder/issues"
-  },
-  "homepage": "https://github.com/thebigbrain/recorder#readme",
   "dependencies": {
     "alt": "^0.17.4",
     "babel-runtime": "^5.8.25",
