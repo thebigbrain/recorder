@@ -2,7 +2,7 @@
   "name": "webpack-example",
   "scripts": {
     "build": "webpack --progress --profile --colors",
-    "watch": "webpack-dev-server --hot --inline --progress --colors",
+    "watch": "webpack-dev-server --hot --inline --progress --colors --port 80",
     "test": "echo \"No unit tests and e2e tests yet\" && exit 1"
   },
   "license": "MIT",

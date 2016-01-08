@@ -21,8 +21,9 @@ module.exports = {
     path: path.join(__dirname, 'tmp'),
     publicPath: '',
     filename: '[name].js',
-    library: ['Example', '[name]'],
-    pathInfo: true
+    chunkFilename: "[id].[chunkhash].chunk.js",
+    //library: ['Example', '[name]'],
+    //pathInfo: true
   },
 
   module: {
@@ -31,7 +32,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
+    /*new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),*/
     new HtmlWebpackPlugin({
       inject: true,
       template: 'src/index.html'
