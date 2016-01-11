@@ -1,4 +1,4 @@
-import alt from "../alt";
+import alt from "../control";
 import LocationActions from "../actions/LocationActions";
 
 class FavoritesStore {

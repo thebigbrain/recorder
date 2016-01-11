@@ -1,4 +1,4 @@
-import alt from "../alt";
+import alt from "../control";
 import LocationActions from "../actions/LocationActions";
 import LocationSource from "../sources/LocationSource";
 import FavoritesStore from "./FavoritesStore";
@@ -25,6 +25,7 @@ class LocationStore {
   handleUpdateLocations(locations) {
     this.locations = locations;
     this.errorMessage = null;
+    console.log("I'm locations ", this.locations);
   }
 
   handleFetchLocations() {
