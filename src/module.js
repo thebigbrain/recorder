@@ -1,7 +1,11 @@
-import React from 'react';  
-import Router from 'react-router';  
+import React from 'react';
+import { render } from 'react-dom'
+import { Router, Route } from 'react-router';  
 import routes from 'routes';
 
-Router.run(routes, Router.HistoryLocation, (Root, state) => {  
+render((
+	<Router>{routes}</Router>
+),document.getElementById('content'))
+/*Router.run(routes, Router.HistoryLocation, (Root, state) => {  
   React.render(<Root {...state}/>, document.getElementById('content'));
-});
+});*/

@@ -10,7 +10,7 @@ module.exports = {
   cache: true,
   entry: {
     module: path.join(srcPath, 'module.js'),
-    common: ['react', 'react-router', 'alt']
+    common: ['react', 'react-router','alt'],
   },
   resolve: {
     root: srcPath,
@@ -22,17 +22,18 @@ module.exports = {
     publicPath: '',
     filename: '[name].js',
     chunkFilename: "[id].[chunkhash].chunk.js",
-    //library: ['Example', '[name]'],
-    //pathInfo: true
+    libraryTarget: "umd",
+    library: ["Recorder", "[name]"],
+    pathInfo: true
   },
 
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel"}
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
     ]
   },
   plugins: [
-    /*new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),*/
+    new webpack.optimize.CommonsChunkPlugin({name:'common'}),
     new HtmlWebpackPlugin({
       inject: true,
       template: 'src/index.html'
@@ -44,6 +45,8 @@ module.exports = {
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     contentBase: './tmp',
-    historyApiFallback: true
+    historyApiFallback: true,
+    host: "0.0.0.0",
+    port: "80"
   }
 };
