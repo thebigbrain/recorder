@@ -4,6 +4,7 @@ var webpack = require('webpack'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   path = require('path'),
   srcPath = path.join(__dirname, 'src');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {  
   target: 'web',
@@ -21,7 +22,7 @@ module.exports = {
     path: path.join(__dirname, 'tmp'),
     publicPath: '',
     filename: '[name].js',
-    chunkFilename: "[id].[chunkhash].chunk.js",
+    chunkFilename: "[name].[chunkhash].chunk.js",
     libraryTarget: "umd",
     library: ["Recorder", "[name]"],
     pathInfo: true
@@ -29,6 +30,12 @@ module.exports = {
 
   module: {
     loaders: [
+      // Extract css files
+      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
+      // Optionally extract less files
+      // or any other compile-to-css language
+      { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")},
+
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
     ]
   },
@@ -38,6 +45,7 @@ module.exports = {
       inject: true,
       template: 'src/index.html'
     }),
+    new ExtractTextPlugin("[name].css"),
     new webpack.NoErrorsPlugin()
   ],
 
