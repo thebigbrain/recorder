@@ -14,7 +14,7 @@
 	height: 100%;
 }
 
-.app .nav {
+.app .express-bars {
 	position:fixed;
 	top: 0;
 	width: 100%;
@@ -41,8 +41,12 @@
 	background-color: #ccc;
 }
 
-.app .footer, .app .nav {
+.app .footer, .app .express-bars {
 	z-index: 99;
+}
+
+.app .footer .nav .active {
+	color: red;
 }
 
 ul li {
@@ -54,5 +58,5 @@ ul li .link {
 	display: inline-block;
 	float:right;
 	text-decoration: none;
-	color: red;
+	color: black;
 }

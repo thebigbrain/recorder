@@ -11,13 +11,13 @@ class UsersIndex extends React.Component {
     return (
       <div>
         <h3>UsersIndex</h3>
-        <Link></Link>
+        <Link to="/">jump to default</Link>
       </div>
     )
   }
 }
 
-class Dashbord extends React.Component {
+class Dashboard extends React.Component {
 	render() {
 	    return <div>Welcome to the app!</div>
 	}
@@ -27,13 +27,17 @@ class App extends React.Component {
 	render(){
 		return (
 			<div className="app">
-		        <ul className="nav">
-		        	<li><Link to="/main" className="link">search</Link></li>
-		        	<li><Link to="/main/example" className="link">photo</Link></li>
-		        	<li><Link to="/" className="link">default</Link></li>
-		        </ul>
+		        <div className="express-bars">
+		        	<p>search</p>
+		        </div>
 		        <div className="detail">{this.props.children}</div>
-		        <footer className="footer">footer is here</footer>
+		        <footer className="footer">
+			        <ul className="nav">
+			        	<li><Link to="/main" className="link" activeClassName="active">Main</Link></li>
+			        	<li><Link to="/example" className="link" activeClassName="active">Example</Link></li>
+			        	<li><Link to="/" className="link" activeClassName="active">Default</Link></li>
+			        </ul>
+		        </footer>
 			</div>
 		)
 	}
@@ -48,11 +52,9 @@ var onEnterCallback = (nextState, replaceState, callback) => {
 
 const routes = (
 	<Route path="/" component={App}>
-		<IndexRoute component={Dashbord}/>
-		<Route path="main" component={Main}>
-			<IndexRoute component={Dashbord}/>
-			<Route path="example" component={Example}/>
-		</Route>
+		<IndexRoute component={UsersIndex}/>
+		<Route path="main" component={Main}/>
+		<Route path="example" component={Example}/>
  	</Route>
 );
 
